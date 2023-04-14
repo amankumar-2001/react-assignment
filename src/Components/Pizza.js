@@ -52,7 +52,7 @@ function Pizza(params) {
     useEffect(() => {
         selectSize(params.pizzaData.size[0].items);
         selectTopping(params.pizzaData.toppings[0].items);
-    }, []);
+    }, [params.pizzaData.size,params.pizzaData.toppings]);
 
     return (
         <div className='row bs'>
